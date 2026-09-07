@@ -85,4 +85,7 @@ func main() {
 	fmt.Println(iniArray1)
 	fmt.Println(iniArray2)
 	fmt.Println(iniSlice)
+
+	fmt.Println(len(iniSlice))
+	fmt.Println(cap(iniSlice))
 }
