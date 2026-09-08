@@ -2,10 +2,16 @@ package main
 
 import "fmt"
 
-func sayHelloWithFilter(name string, filter func(string) string){
+type Filter func(string) string
+
+func sayHelloWithFilter(name string, filter Filter){
 	filteredName := filter(name)
 	fmt.Println("hello", filteredName)
 }
+// func sayHelloWithFilter(name string, filter func(string) string){
+// 	filteredName := filter(name)
+// 	fmt.Println("hello", filteredName)
+// }
 
 func spamFilter(name string) string{
 	if name == "kambing"{
